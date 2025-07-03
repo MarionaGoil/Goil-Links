@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Descarga la app Goil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/android/i.test(userAgent)) {
+      window.location.href = "https://play.google.com/store/apps/details?id=app.goil.community";
+    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      window.location.href = "https://apps.apple.com/es/app/community-by-goil/id6464678300";
+    } else {
+      // En caso de no detectar, enviar a una página de fallback (opcional)
+      window.location.href = "https://goil.app/";
+    }
+  </script>
+</head>
+<body>
+  <p>Redireccionando... Si no se abre, elige tu tienda:</p>
+  <ul>
+    <li><a href="https://apps.apple.com/es/app/community-by-goil/id6464678300">App Store (iOS)</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=app.goil.community">Google Play (Android)</a></li>
+  </ul>
+</body>
+</html>
